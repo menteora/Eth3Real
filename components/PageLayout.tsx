@@ -28,7 +28,6 @@ export function PageLayout({ children, allPosts, snap = false }: PageLayoutProps
       
       <section 
         className={`h-full overflow-y-auto scroll-smooth ${snap ? 'snap-y snap-mandatory' : ''}`}
-        style={{ scrollbarWidth: 'none' }}
         onScroll={handleScroll}
       >
         {children}

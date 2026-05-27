@@ -37,7 +37,7 @@ export function PostDetail({ post, allPosts }: { post: Post; allPosts: Post[] })
       animate={{ opacity: 1, clipPath: 'inset(0% 0 0 0)' }}
       exit={{ opacity: 0, clipPath: 'inset(100% 0 0 0)' }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed inset-0 z-[100] bg-white dark:bg-[#0a0a0a] overflow-y-auto overflow-x-hidden no-scrollbar"
+      className="fixed inset-0 z-[100] bg-white dark:bg-[#0a0a0a] overflow-y-auto overflow-x-hidden"
       ref={containerRef}
     >
       <div className="fixed top-0 left-0 w-full h-1 z-[120]">
