@@ -1,9 +1,16 @@
-import { getPage } from '@/lib/posts';
+import { getPage, getPageSlugs } from '@/lib/posts';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
+
+export async function generateStaticParams() {
+  const slugs = getPageSlugs();
+  return slugs.map((slug) => ({
+    slug: slug,
+  }));
+}
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;

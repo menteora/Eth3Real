@@ -57,6 +57,14 @@ export interface PageData {
   content: string;
 }
 
+export function getPageSlugs(): string[] {
+  if (!fs.existsSync(pagesDirectory)) return [];
+  const fileNames = fs.readdirSync(pagesDirectory);
+  return fileNames
+    .filter(fileName => fileName.endsWith('.md'))
+    .map(fileName => fileName.replace(/\.md$/, ''));
+}
+
 export function getPage(slug: string): PageData | null {
   if (!fs.existsSync(pagesDirectory)) return null;
   const fullPath = path.join(pagesDirectory, `${slug}.md`);

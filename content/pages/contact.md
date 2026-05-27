@@ -1,7 +1,7 @@
 ---
-title: 'Contatti & Connessioni'
-subtitle: 'Entra nel flusso della narrazione digitale.'
-image: 'https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?auto=format&fit=crop&q=80&w=2000'
+title: "Contatti & Connessioni"
+subtitle: "Entra nel flusso della narrazione digitale."
+image: "https://images.unsplash.com/photo-1510784722466-f2aa9c52fff6?auto=format&fit=crop&q=80&w=2000"
 ---
 
 Siamo sempre alla ricerca di collaboratori, sognatori e tecnofili che condividano la nostra visione.

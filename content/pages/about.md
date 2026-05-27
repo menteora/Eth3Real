@@ -1,7 +1,7 @@
 ---
-title: 'Eth3Real: L\'Unione dei Mondi'
-subtitle: 'Un manifesto per il design techno-umanista.'
-image: 'https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&q=80&w=2067'
+title: "Eth3Real: L'Unione dei Mondi"
+subtitle: "Un manifesto per il design techno-umanista."
+image: "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&q=80&w=2067"
 ---
 
 **Eth3Real** nasce dalla necessità di ritrovare un baricentro umano in un ecosistema digitale sempre più saturo. Non è solo un esperimento di **quiete informativa**, ma una sintesi tripartita della nostra esistenza contemporanea:

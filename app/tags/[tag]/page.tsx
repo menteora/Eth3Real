@@ -1,6 +1,13 @@
-import { getPostsByTag, getPosts } from '@/lib/posts';
+import { getPostsByTag, getPosts, getAllTags } from '@/lib/posts';
 import { TagContent } from '@/components/TagContent';
 import Link from 'next/link';
+
+export async function generateStaticParams() {
+  const tags = getAllTags();
+  return tags.map((tag) => ({
+    tag: encodeURIComponent(tag),
+  }));
+}
 
 export default async function TagPage({ params }: { params: Promise<{ tag: string }> }) {
   const { tag } = await params;

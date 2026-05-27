@@ -1,7 +1,6 @@
 import type {NextConfig} from 'next';
 
 const isGithubActions = process.env.GITHUB_ACTIONS === 'true';
-const repo = process.env.GITHUB_REPOSITORY ? `/${process.env.GITHUB_REPOSITORY.split('/')[1]}` : '';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -30,8 +29,7 @@ const nextConfig: NextConfig = {
     ],
   },
   output: isGithubActions ? 'export' : 'standalone',
-  basePath: isGithubActions ? repo : '',
-  assetPrefix: isGithubActions ? repo : '',
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.
