@@ -5,6 +5,7 @@ import { ThemeToggle } from './ThemeToggle';
 import { useApp } from '@/context/AppContext';
 import { Search, X } from 'lucide-react';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export function Header() {
   const { setActivePostId, searchQuery, setSearchQuery, isScrolled } = useApp();
@@ -17,12 +18,13 @@ export function Header() {
         : 'p-6 md:px-12 md:py-8'
     } flex justify-between items-center`}>
       <div className="flex items-center gap-6 pointer-events-auto">
-        <motion.button
-          onClick={() => setActivePostId(null)}
-          className="text-lg font-serif tracking-tighter text-zinc-900 dark:text-white group flex items-center gap-4"
-        >
-          <span className="group-hover:italic transition-all">Eth3Real</span>
-        </motion.button>
+        <Link href="/" onClick={() => setActivePostId(null)}>
+          <motion.button
+            className="text-lg font-serif tracking-tighter text-zinc-900 dark:text-white group flex items-center gap-4"
+          >
+            <span className="group-hover:italic transition-all">Eth3Real</span>
+          </motion.button>
+        </Link>
         
         <div className="hidden md:flex flex-col font-mono text-[7px] tracking-[0.2em] text-zinc-400 dark:text-zinc-500 uppercase">
           <span>Lat: 0° 00' 00''</span>

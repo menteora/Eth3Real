@@ -31,7 +31,7 @@ export function HomeContent({ posts, graphData }: HomeContentProps) {
             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
             className="max-w-7xl mx-auto w-full relative z-10"
           >
-            <div className="mb-2 md:mb-6">
+            <div className="mb-2 md:mb-6 hidden md:block">
               <StatusLine label="Eth3Real Protocol 1.0" sublabel="System Active" />
             </div>
             
@@ -80,7 +80,9 @@ export function HomeContent({ posts, graphData }: HomeContentProps) {
             </div>
             
             <div className="mt-12 flex flex-col gap-6">
-              <StatusLine label="Connessione ottimizzata" sublabel="Pronto all'uso" />
+              <div className="hidden md:block">
+                <StatusLine label="Connessione ottimizzata" sublabel="Pronto all'uso" />
+              </div>
               <div className="flex items-center gap-2 font-mono">
                 <div className="w-8 h-[1px] bg-zinc-200 dark:bg-zinc-800" />
                 <span className="text-[9px] uppercase tracking-widest text-zinc-300 dark:text-zinc-500">
@@ -106,10 +108,12 @@ export function HomeContent({ posts, graphData }: HomeContentProps) {
         </section>
 
         <footer className="h-screen flex flex-col justify-center items-center snap-start text-center px-6 md:px-12">
-          <div className="flex items-center gap-8 md:gap-16 w-full max-w-4xl mx-auto mb-16">
-            <div className="h-[1px] flex-1 bg-zinc-100 dark:bg-zinc-900" />
-            <h3 className="text-4xl md:text-7xl font-serif italic whitespace-nowrap">Connettiamoci.</h3>
-            <div className="h-[1px] flex-1 bg-zinc-100 dark:bg-zinc-900" />
+          <div className="relative w-full max-w-5xl mx-auto mb-16 flex items-center justify-center group">
+            <div className="absolute inset-x-0 h-[1px] bg-zinc-200 dark:bg-zinc-800" />
+            <div className="absolute inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-zinc-400 dark:via-white to-transparent opacity-30" />
+            <h3 className="text-5xl md:text-8xl font-serif italic whitespace-nowrap bg-white dark:bg-black px-8 md:px-16 relative z-10 transition-all duration-1000 group-hover:tracking-tighter">
+              Connettiamoci.
+            </h3>
           </div>
           
           <div className="flex gap-12 text-[10px] font-bold tracking-[0.4em] uppercase text-zinc-400 dark:text-zinc-500">
