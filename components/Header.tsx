@@ -1,0 +1,73 @@
+'use client';
+
+import { motion, AnimatePresence } from 'motion/react';
+import { ThemeToggle } from './ThemeToggle';
+import { useApp } from '@/context/AppContext';
+import { Search, X } from 'lucide-react';
+import { useState } from 'react';
+
+export function Header() {
+  const { setActivePostId, searchQuery, setSearchQuery, isScrolled } = useApp();
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  return (
+    <header className={`fixed top-0 left-0 w-full z-[90] transition-all duration-500 pointer-events-none ${
+      isScrolled 
+        ? 'bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-900 py-4 px-6 md:px-12' 
+        : 'p-6 md:px-12 md:py-8'
+    } flex justify-between items-center`}>
+      <div className="flex items-center gap-6 pointer-events-auto">
+        <motion.button
+          onClick={() => setActivePostId(null)}
+          className="text-lg font-serif tracking-tighter text-zinc-900 dark:text-white group flex items-center gap-4"
+        >
+          <span className="group-hover:italic transition-all">Eth3Real</span>
+        </motion.button>
+        
+        <div className="hidden md:flex flex-col font-mono text-[7px] tracking-[0.2em] text-zinc-400 dark:text-zinc-600 uppercase">
+          <span>Lat: 0° 00' 00''</span>
+          <span>Lng: 0° 00' 00''</span>
+          <span className="text-zinc-500 dark:text-zinc-500 mt-1">Null Island</span>
+        </div>
+
+        <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+          <div className="w-1 h-1 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="text-[7px] font-bold tracking-[0.2em] text-emerald-500 uppercase">System Active</span>
+        </div>
+      </div>
+      
+      <div className="flex items-center gap-4 md:gap-8 pointer-events-auto">
+        <div className="relative flex items-center">
+          <AnimatePresence>
+            {isSearchOpen && (
+              <motion.input
+                initial={{ width: 0, opacity: 0 }}
+                animate={{ width: 200, opacity: 1 }}
+                exit={{ width: 0, opacity: 0 }}
+                type="text"
+                placeholder="CERCA NELL'ARCHIVIO..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="bg-transparent border-b border-zinc-200 dark:border-zinc-800 focus:outline-none text-[10px] font-mono tracking-widest py-1 px-2 uppercase placeholder:opacity-50"
+                autoFocus
+              />
+            )}
+          </AnimatePresence>
+          <button 
+            onClick={() => {
+              if (isSearchOpen && searchQuery) {
+                setSearchQuery('');
+              } else {
+                setIsSearchOpen(!isSearchOpen);
+              }
+            }}
+            className="p-2 hover:opacity-50 transition-opacity"
+          >
+            {isSearchOpen && searchQuery ? <X className="w-4 h-4" /> : <Search className="w-4 h-4" />}
+          </button>
+        </div>
+        <ThemeToggle />
+      </div>
+    </header>
+  );
+}
