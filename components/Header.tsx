@@ -24,10 +24,10 @@ export function Header() {
           <span className="group-hover:italic transition-all">Eth3Real</span>
         </motion.button>
         
-        <div className="hidden md:flex flex-col font-mono text-[7px] tracking-[0.2em] text-zinc-400 dark:text-zinc-600 uppercase">
+        <div className="hidden md:flex flex-col font-mono text-[7px] tracking-[0.2em] text-zinc-400 dark:text-zinc-500 uppercase">
           <span>Lat: 0° 00' 00''</span>
           <span>Lng: 0° 00' 00''</span>
-          <span className="text-zinc-500 dark:text-zinc-500 mt-1">Null Island</span>
+          <span className="text-zinc-500 dark:text-zinc-400 mt-1">Null Island</span>
         </div>
 
         <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">

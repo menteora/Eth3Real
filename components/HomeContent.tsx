@@ -42,19 +42,19 @@ export function HomeContent({ posts, graphData }: HomeContentProps) {
                 <div className="flex flex-row items-center justify-between w-full gap-4 md:gap-32 relative z-10 mb-10 md:mb-24">
                   {/* Background Hub 3 inside this row for perfect centering */}
                   <div className="absolute inset-0 z-0 select-none pointer-events-none flex items-center justify-center overflow-visible">
-                    <span className="text-[40vw] md:text-[35vw] lg:text-[25vw] font-serif font-light leading-none text-zinc-200/40 dark:text-zinc-900/20 transition-all duration-1000 select-none">3</span>
+                    <span className="text-[40vw] md:text-[35vw] lg:text-[25vw] font-serif font-light leading-none text-zinc-300/50 dark:text-zinc-100/30 transition-all duration-1000 select-none">3</span>
                   </div>
 
                   {/* ETH Cluster: Network/Digital */}
                   <div className="flex flex-col items-center md:items-start group w-1/2 md:w-1/3">
-                    <StatusLine label="01. Eth" sublabel="Net" theme="zinc" hideSubOnMobile={true} />
+                    <StatusLine label="01. Eth" sublabel="Network / Digitale" theme="zinc" hideSubOnMobile={true} />
                     <h1 className="text-3xl sm:text-4xl md:text-[8vw] font-serif tracking-tighter leading-none group-hover:italic transition-all cursor-default">Eth</h1>
                     <div className="w-[1px] h-8 md:h-12 bg-gradient-to-b from-zinc-200 to-transparent dark:from-zinc-800 dark:to-transparent mt-2 md:mt-4 hidden md:block" />
                   </div>
 
-                  {/* REAL Cluster: Concretezza/Praticità */}
+                  {/* REAL Cluster: Natura / Analogico */}
                   <div className="flex flex-col items-center md:items-end group w-1/2 md:w-1/3 text-center md:text-right">
-                    <StatusLine label="02. Real" sublabel="Real" theme="zinc" hideSubOnMobile={true} />
+                    <StatusLine label="02. Real" sublabel="Presenza / Concretezza" theme="zinc" hideSubOnMobile={true} />
                     <h1 className="text-3xl sm:text-4xl md:text-[8vw] font-serif tracking-tighter leading-none group-hover:italic transition-all cursor-default">Real</h1>
                     <div className="w-[1px] h-8 md:h-12 bg-gradient-to-b from-zinc-200 to-transparent dark:from-zinc-800 dark:to-transparent mt-2 md:mt-4 hidden md:block" />
                   </div>
@@ -66,14 +66,14 @@ export function HomeContent({ posts, graphData }: HomeContentProps) {
                     <div className="flex gap-3">
                       {[1, 2, 3].map(i => (
                         <motion.div 
-                          key={i} 
-                          animate={{ opacity: [0.3, 1, 0.3] }}
-                          transition={{ duration: 2, repeat: Infinity, delay: i * 0.4 }}
-                          className="w-1.5 h-1.5 rounded-full bg-emerald-500" 
+                           key={i} 
+                           animate={{ opacity: [0.3, 1, 0.3] }}
+                           transition={{ duration: 2, repeat: Infinity, delay: i * 0.4 }}
+                           className="w-1.5 h-1.5 rounded-full bg-emerald-500" 
                         />
                       ))}
                     </div>
-                    <StatusLine label="03. Ethereal" sublabel="Valori • Ignoto" theme="emerald" />
+                    <StatusLine label="03. Ethereal" sublabel="Viaggio verso l'ignoto / Con i propri valori" theme="emerald" />
                   </div>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export function HomeContent({ posts, graphData }: HomeContentProps) {
               <StatusLine label="Connessione ottimizzata" sublabel="Pronto all'uso" />
               <div className="flex items-center gap-2 font-mono">
                 <div className="w-8 h-[1px] bg-zinc-200 dark:bg-zinc-800" />
-                <span className="text-[9px] uppercase tracking-widest text-zinc-300 dark:text-zinc-700">
+                <span className="text-[9px] uppercase tracking-widest text-zinc-300 dark:text-zinc-500">
                   {searchQuery ? `Ricerca: ${searchQuery}` : 'Scorri per Decriptare'}
                 </span>
               </div>
@@ -96,7 +96,7 @@ export function HomeContent({ posts, graphData }: HomeContentProps) {
             <PostCard key={post.id} post={post} index={index} />
           ))
         ) : searchQuery && (
-          <div className="h-screen flex items-center justify-center snap-start font-mono text-zinc-400 uppercase tracking-widest text-[10px]">
+          <div className="h-screen flex items-center justify-center snap-start font-mono text-zinc-400 dark:text-zinc-500 uppercase tracking-widest text-[10px]">
             Nessuna voce corrispondente trovata nell&apos;archivio.
           </div>
         )}
@@ -112,7 +112,7 @@ export function HomeContent({ posts, graphData }: HomeContentProps) {
             <div className="h-[1px] flex-1 bg-zinc-100 dark:bg-zinc-900" />
           </div>
           
-          <div className="flex gap-12 text-[10px] font-bold tracking-[0.4em] uppercase text-zinc-400">
+          <div className="flex gap-12 text-[10px] font-bold tracking-[0.4em] uppercase text-zinc-400 dark:text-zinc-500">
             <Link href="/pages/about" className="hover:text-zinc-900 dark:hover:text-white transition-colors">Manifesto</Link>
             <Link href="/tags" className="hover:text-zinc-900 dark:hover:text-white transition-colors">Temi</Link>
             <Link href="/pages/contact" className="hover:text-zinc-900 dark:hover:text-white transition-colors">Contatti</Link>

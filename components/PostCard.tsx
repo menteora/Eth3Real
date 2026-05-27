@@ -15,15 +15,15 @@ export function PostCard({ post, index }: { post: Post; index: number }) {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ margin: "-10%" }}
       transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-      className="group relative w-full h-screen flex flex-col justify-center gap-12 cursor-pointer snap-start border-b border-zinc-100 dark:border-zinc-900 md:border-none px-6 md:px-12"
+      className="group relative w-full h-screen flex flex-col justify-center gap-12 cursor-pointer snap-start border-b border-zinc-100 dark:border-zinc-800 md:border-none px-6 md:px-12"
       onClick={() => setActivePostId(post.id)}
     >
       <div className="max-w-7xl mx-auto w-full relative flex flex-col items-start px-4 md:px-0">
         <div className="flex flex-col gap-8 max-w-xl md:max-w-2xl relative z-10">
           <div className="flex items-center gap-6 font-mono">
             <StatusLine label="Live" />
-            <span className="text-[10px] text-zinc-400 dark:text-zinc-600">ID: 00{index + 1}</span>
-            <div className="h-[1px] flex-1 bg-zinc-100 dark:bg-zinc-900 min-w-8" />
+            <span className="text-[10px] text-zinc-400 dark:text-zinc-500">ID: 00{index + 1}</span>
+            <div className="h-[1px] flex-1 bg-zinc-100 dark:bg-zinc-800 min-w-8" />
             <span className="text-[10px] text-zinc-400 uppercase tracking-widest flex items-center gap-2">
               {post.id} <span className="opacity-30">/</span> {post.date.split(' ').join('.')}
             </span>
@@ -39,8 +39,8 @@ export function PostCard({ post, index }: { post: Post; index: number }) {
             </p>
             
             <div className="flex flex-col gap-2 font-mono ml-auto">
-              <span className="text-[8px] uppercase tracking-widest text-zinc-400">System Log:</span>
-              <div className="text-[10px] text-zinc-500 flex items-center gap-3">
+              <span className="text-[8px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500">System Log:</span>
+              <div className="text-[10px] text-zinc-500 dark:text-zinc-400 flex items-center gap-3">
                 <span>Lettura: 4m</span>
                 <span>•</span>
                 <span className="text-zinc-600 dark:text-zinc-400">#{post.tags[0]}</span>

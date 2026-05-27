@@ -123,7 +123,7 @@ export function NeuralGraph({
     node.append('circle')
       .attr('r', 4)
       .attr('fill', 'currentColor')
-      .attr('class', 'text-zinc-300 dark:text-zinc-700');
+      .attr('class', 'text-zinc-300 dark:text-zinc-500');
 
     // Labels
     node.append('text')
@@ -168,7 +168,7 @@ export function NeuralGraph({
           style={{ minHeight: `${height}px` }}
         />
         
-        <footer className="mt-8 flex justify-between items-center font-mono text-[8px] uppercase tracking-[0.3em] text-zinc-300 dark:text-zinc-700">
+        <footer className="mt-8 flex justify-between items-center font-mono text-[8px] uppercase tracking-[0.3em] text-zinc-300 dark:text-zinc-500">
           <span>Sincronia Neurale: 100%</span>
           <span>Interattività: On</span>
         </footer>

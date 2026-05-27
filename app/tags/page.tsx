@@ -9,7 +9,7 @@ export default async function TagsPage() {
     <div className="min-h-screen pt-32 pb-20 px-6 md:px-12 max-w-4xl mx-auto">
       <Link 
         href="/"
-        className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.4em] uppercase text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors mb-20"
+        className="inline-flex items-center gap-2 text-[10px] font-bold tracking-[0.4em] uppercase text-zinc-400 dark:text-zinc-500 hover:text-zinc-900 dark:hover:text-white transition-colors mb-20"
       >
         <ArrowLeft className="w-4 h-4" />
         Torna alla Home
@@ -31,7 +31,7 @@ export default async function TagsPage() {
           >
             <div className="flex items-center justify-between mb-2">
               <Hash className="w-4 h-4 text-emerald-500 opacity-50 group-hover:opacity-100 transition-opacity" />
-              <span className="font-mono text-[8px] uppercase tracking-widest text-zinc-300 dark:text-zinc-700">Archiviato</span>
+              <span className="font-mono text-[8px] uppercase tracking-widest text-zinc-300 dark:text-zinc-500">Archiviato</span>
             </div>
             <h2 className="text-2xl font-serif group-hover:italic transition-all">{tag}</h2>
           </Link>

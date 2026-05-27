@@ -49,7 +49,7 @@ export function PostDetail({ post, allPosts }: { post: Post; allPosts: Post[] })
 
       <div className={`fixed top-0 left-0 w-full transition-all duration-500 z-[110] pointer-events-none flex justify-between items-center ${
         headerScrolled 
-          ? 'bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-900 py-4 px-8' 
+          ? 'bg-white/80 dark:bg-black/80 backdrop-blur-md border-b border-zinc-100 dark:border-zinc-800 py-4 px-8' 
           : 'p-8'
       }`}>
         <button
@@ -75,11 +75,11 @@ export function PostDetail({ post, allPosts }: { post: Post; allPosts: Post[] })
           className="mb-24"
         >
           <div className="flex items-center gap-4 mb-8 font-mono">
-            <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-zinc-400 dark:text-zinc-600">
+            <span className="text-[10px] font-bold tracking-[0.4em] uppercase text-zinc-400 dark:text-zinc-500">
               ID: {post.id}
             </span>
-            <div className="h-[1px] w-8 bg-zinc-100 dark:bg-zinc-900" />
-            <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-zinc-500">
+            <div className="h-[1px] w-8 bg-zinc-100 dark:bg-zinc-800" />
+            <span className="text-[9px] font-medium tracking-[0.2em] uppercase text-zinc-500 dark:text-zinc-400">
               {post.date.split(' ').join(' // ')}
             </span>
           </div>
@@ -88,21 +88,21 @@ export function PostDetail({ post, allPosts }: { post: Post; allPosts: Post[] })
             {post.title}
           </h1>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 font-mono border-y border-zinc-100 dark:border-zinc-900 py-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 font-mono border-y border-zinc-100 dark:border-zinc-800 py-8">
             <div className="flex flex-col gap-1">
-              <span className="text-[8px] uppercase tracking-widest text-zinc-400">Contesto</span>
+              <span className="text-[8px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500">Contesto</span>
               <span className="text-[10px] uppercase font-bold tracking-widest text-zinc-900 dark:text-white">Umanistico</span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="text-[8px] uppercase tracking-widest text-zinc-400">Tempo di Lettura</span>
+              <span className="text-[8px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500">Tempo di Lettura</span>
               <span className="text-[10px] uppercase font-bold tracking-widest text-zinc-900 dark:text-white">~4.2 Minuti</span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="text-[8px] uppercase tracking-widest text-zinc-400">Stabilità</span>
+              <span className="text-[8px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500">Stabilità</span>
               <span className="text-[10px] uppercase font-bold tracking-widest text-emerald-500">Ottimizzato</span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="text-[8px] uppercase tracking-widest text-zinc-400">Entropia</span>
+              <span className="text-[8px] uppercase tracking-widest text-zinc-400 dark:text-zinc-500">Entropia</span>
               <span className="text-[10px] uppercase font-bold tracking-widest text-zinc-900 dark:text-white">Minima</span>
             </div>
           </div>
@@ -146,7 +146,7 @@ export function PostDetail({ post, allPosts }: { post: Post; allPosts: Post[] })
           </ReactMarkdown>
         </div>
 
-        <div className="flex flex-wrap gap-4 py-12 border-y border-zinc-100 dark:border-zinc-900 mt-20">
+        <div className="flex flex-wrap gap-4 py-12 border-y border-zinc-100 dark:border-zinc-800 mt-20">
           {post.tags.map((tag) => (
             <Link 
               key={tag}
@@ -161,7 +161,7 @@ export function PostDetail({ post, allPosts }: { post: Post; allPosts: Post[] })
         {relatedPosts.length > 0 && (
           <div className="mt-40">
             <header className="mb-16">
-              <span className="font-mono text-[9px] uppercase tracking-[0.4em] text-zinc-400 block mb-4">Pillole di Approfondimento</span>
+              <span className="font-mono text-[9px] uppercase tracking-[0.4em] text-zinc-400 dark:text-zinc-500 block mb-4">Pillole di Approfondimento</span>
               <h3 className="text-4xl font-serif italic tracking-tighter">Risonanze Correlate.</h3>
             </header>
             

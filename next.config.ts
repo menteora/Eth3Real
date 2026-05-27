@@ -29,6 +29,7 @@ const nextConfig: NextConfig = {
     ],
   },
   output: isGithubActions ? 'export' : 'standalone',
+  trailingSlash: true,
   basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {

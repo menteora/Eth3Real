@@ -19,8 +19,8 @@ export function StatusLine({ label, sublabel, theme = 'emerald', hideSubOnMobile
       </span>
       {sublabel && (
         <div className={hideSubOnMobile ? 'hidden sm:flex items-center gap-3' : 'flex items-center gap-3'}>
-          <div className="h-[1px] w-4 bg-zinc-100 dark:bg-zinc-900" />
-          <span className="text-[9px] uppercase tracking-widest text-zinc-300 dark:text-zinc-700">
+          <div className="h-[1px] w-4 bg-zinc-100 dark:bg-zinc-800" />
+          <span className="text-[9px] uppercase tracking-widest text-zinc-300 dark:text-zinc-500">
             {sublabel}
           </span>
         </div>
