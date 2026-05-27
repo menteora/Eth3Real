@@ -31,11 +31,11 @@ export function Header() {
           <span>Lng: 0° 00' 00''</span>
           <span className="text-zinc-500 dark:text-zinc-400 mt-1">Null Island</span>
         </div>
+      </div>
 
-        <div className="flex items-center gap-2 px-2.5 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-          <div className="w-1 h-1 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-[7px] font-bold tracking-[0.2em] text-emerald-500 uppercase">System Active</span>
-        </div>
+      <div className="absolute left-1/2 -translate-x-1/2 hidden sm:flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/5 border border-emerald-500/10 pointer-events-auto">
+        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+        <span className="text-[8px] font-bold tracking-[0.3em] text-emerald-500 uppercase">System Active</span>
       </div>
       
       <div className="flex items-center gap-4 md:gap-8 pointer-events-auto">
