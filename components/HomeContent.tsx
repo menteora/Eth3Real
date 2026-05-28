@@ -38,7 +38,7 @@ export function HomeContent({ posts, graphData }: HomeContentProps) {
             
             <div className="relative py-2 md:py-8 flex flex-col items-center justify-center min-h-[60vh] md:min-h-[45vh]">
               {/* Background Hub 3 moved to outer container for true background behavior */}
-              <div className="absolute inset-0 z-0 select-none pointer-events-none flex items-center justify-center overflow-visible">
+              <div className="absolute inset-0 z-0 select-none pointer-events-none flex items-center justify-center overflow-visible -translate-y-12 md:-translate-y-20">
                 <motion.span 
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
